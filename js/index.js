@@ -26,7 +26,7 @@ function crearCarton() {
     let div = document.createElement('div');
     for(var j = 0; j < 15; j++){
       //let div = document.createElement('div');
-      if(numsCarton.usuario[i] == numsCarton.cpu[j]){
+      if(numsCarton.usuario[i] == numsCarton.cpu[j]){ // Hay que verificar esto
         div.className = 'numero ' + 'numero'+numsCarton.cpu[i] + 'numero 2';
       } else {
         div.className = 'numero ' + 'numero'+numsCarton.cpu[i];
@@ -39,12 +39,12 @@ function crearCarton() {
 
 crearCarton();
 
-function quitarNum(num) {
+function quitarNum(num) { // Saco numero del array carton
     _.pull(numsCarton.usuario,num);
     _.pull(numsCarton.cpu,num);
 }
 
-function seek(num){
+function seek(num){ // Busco el numero, lo quito (quitarNum()) y lo marco
   let marca = '';
   for(var i = 0; i < 15; i++){
     if(num == numsCarton.usuario[i] || num == numsCarton.cpu[i]){
@@ -56,7 +56,7 @@ function seek(num){
   }
 }
 
-  //for(var i = 0; i < 15; i++){
+  //for(var i = 0; i < 15; i++){ // Esto sobra
     //if(num == numsCarton.cpu[i]){
       //marca = String('.numero'+num);
       //quitarNum(num);
@@ -76,9 +76,9 @@ function ganador(){
   }
 }
 
-function boton() {
+function boton() { // Funcion pricipal, activa la funciones y marca el rand num
   let num = lista[Math.floor((Math.random() * 90) + 1)];
   elementos.dado.textContent = num;
-  seek(num);
-  ganador();
+  seek(num); // Llamo a la funcion de buscar
+  ganador(); // Compruebo el ganador
 }
