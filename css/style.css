@@ -1,0 +1,63 @@
+.master{
+  width: 80%;
+  height: 400px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+.carton{
+  width: 35%;
+  height: 100%;
+  border: .2px solid black;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.dadospace{
+  width: 35%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dado{
+  width: 150px;
+  height: 150px;
+  border: 2px solid black;
+  border-radius: 20px 20px 20px;
+  margin: auto;
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button{
+  width: 100px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.box{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.numero{
+  width: 40px;
+  height: 40px;
+  border: .2px solid black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.celdatachada{
+  text-decoration: line-through;
+}
